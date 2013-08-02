@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".CallShow" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip"
+        android:background="@drawable/tab_pressed"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/app_name" />
+
+        <ToggleButton
+            android:id="@+id/toggleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toggle_title"
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/search_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1.0"
+                android:background="@drawable/search_bar_edit_bg"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/search_bar_icon_normal" />
+
+                <EditText
+                    android:id="@+id/search_bar_et"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="搜索"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="15.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_clear_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="10.0dip"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/search_clear" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <RelativeLayout
+            android:id="@+id/Loclayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setting_list_bg"
+            android:gravity="center_horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/Loctv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:text="查询归属地"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/LocBtn"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/btn_bottom_black_normal"
+                android:gravity="center"
+                android:text="查询"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="18dp" />
+
+        <RelativeLayout
+            android:id="@+id/Loadlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setting_list_bg"
+            android:gravity="center_horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/loadtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:text="导入数据库"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/LoadBtn"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/btn_bottom_black_normal"
+                android:gravity="center"
+                android:text="载入"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="18dp" />
+
+        <RelativeLayout
+            android:id="@+id/setting"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/setting_list_bg"
+            android:padding="5dp" >
+
+            <ToggleButton
+                android:id="@+id/toggleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/toggle_me"
+                android:checked="true"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/LocWindow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:text="悬浮框设置"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
